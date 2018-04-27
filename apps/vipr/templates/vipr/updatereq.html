@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Update Request Information</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2 class='uuhd'>Request Detail Information</h2>
+        <div class="urbtns">
+            <a href="/home"><button class='regbtn'>Go Back</button></a>
+        </div>
+        <div class='recordDtl'>
+            <form class='urfrm' action="/update/" method='post'>
+                {% csrf_token %}
+                <input type="hidden" name="req_id" value={{request.id}} />
+                <h2 class='urfrmlbl'>Information Requested:</h2>
+                <h3 class='urfrmlbl'>{{request.req_desc}}</h3>
+                <h2 class='urfrmlbl'>Request Resolution:</h2>
+                <textarea class='txtarea' name="req_res">{{request.req_res}}</textarea>
+                <div>
+                    <label class="add_a_rec" for="add_a_rec">Add a record:</label></td>
+                    <label class="radio" for="Yes">Yes</label>
+                    <input type="radio" id="Yes" name="add_a_rec" value="Yes">
+                    <label class="radio" for="No">No</label>
+                    <input type="radio" id="No" name="add_a_rec" value="No">
+                </div>
+                <input class='urbtn' type='submit' value='Submit'>
+            </form>
+        </div>
+        <h4 class='rvrdhd'>Additional Document Information:</h4>
+        <div class='urfiles'>
+            {% for d in documents %}
+                <h3><h4 class='data'><a href='{{ MEDIA_URL }}{{ d.document }}' download>{{d.document}}</a></h4></h3>
+            {% endfor %}
+        </div>
+        <div class="furbtns">
+            <a href="/logout"><button class='footer2'>Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>
+

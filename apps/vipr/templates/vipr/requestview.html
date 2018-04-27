@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>View a Request</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2 class='rvhd'>Request Detail Information</h2>
+        <div class="rvbtns">
+            <a href="/home"><button class='ksbtn'>Go Back</button></a>
+        </div>
+        <div class='recordDtl'>
+            <h2>Information Requested:</h2>
+            <h3>{{request.req_desc}}</h3>
+            <h2>Request Resolution:</h2>
+            <h3>{{request.req_res}}</h3>
+            <h4 class='rvrdhd'>Additional Document Information:</h4>
+            <div class='uptdrecs'>
+                {% for d in documents %}
+                    <h3><h4 class='data'><a href='{{ MEDIA_URL }}{{ d.document }}' download>{{d.document}}</a></h4></h3>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="fbtns">
+            <a href="/logout"><button class='footer'>Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>

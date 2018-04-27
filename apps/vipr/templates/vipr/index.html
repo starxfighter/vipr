@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Welcome to Vipr</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="header">
+
+            <a href="/admin"><button>Admin</button></a>
+        </div>
+        <div class="messages">
+            {% if messages %}
+            <ul class="message">
+                {% for message in messages %}
+                <li{% if message.tags%} class="{{message.tags}}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="title">
+            <h2>V I P R</h2>
+            <h4>Veteran Information Portal, Remote</h4>
+        </div>
+        <div class="airforce"></div>
+        <div class="army"></div>
+        <div class="navy"></div>
+        <div class="marines"></div>
+        <div class="natgrd"></div> 
+        <div class="cstgrd"></div>              
+        <div class="launchbtn">
+            <a href="/login"><button class='ilb'>Login</button></a>
+            <a href="/register"><button class='ilb'>Register for service</button></a>
+        </div>
+        <div class='explain'>
+            <p>&nbsp;&nbsp;&nbsp;VIPR is a virtual help desk for veterans to use to ask questions or
+            concerns about their benefits or other issues and then get a response
+            back to their questions. This help desk consolidates the disparate Information
+            resource pools into one easily accessible location.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

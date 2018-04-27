@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Update User Information</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2 class='uuhd'>Update User Information</h2>
+        <div class="uubtns">
+            <a href="/home"><button class='regbtn'>Go Back</button></a>
+        </div>
+        <div class='recordDtl'>
+            <form class='regfrm' action="/userupdate/" method='post'>
+                {% csrf_token %}
+                <input type="hidden" name="user_id" value={{userU.id}} />
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><h5 class='frmlbl'>First Name: </h5></td>
+                            <td><input type="text" name="fname" id="fname" value="{{userU.first_name}}"></td>
+                        </tr>
+                        <tr>
+                            <td><h5 class='frmlbl'>Last Name: </h5></td>
+                            <td><input type="text" name="lname" id="lname" value="{{userU.last_name}}"></td>
+                        </tr>
+                        <tr>
+                            <td><h5 class='frmlbl'>Branch of Service:</h5></td>
+                            <td>
+                                <select name="svc_branch" id="svc_branch">
+                                    <option value="{{userU.service_branch}}">{{userU.service_branch}}</option>
+                                    <option value="airforce">AirForce</option>
+                                    <option value="army">Army</option>
+                                    <option value="navy">Navy</option>
+                                    <option value="marines">Marines</option>
+                                    <option value="natgrd">National Guard</option>
+                                    <option value="coastgrd">Coast Guard</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h5 class='frmlbl'>System Access Level:</h5></td>
+                            <td>
+                                <select name="sys_access_level" id="sys_access_level">
+                                        <option value="{{userU.sys_access_level}}">{{userU.sys_access_level}}</option>
+                                        <option value="1">User</option>
+                                        <option value="2">Help Desk</option>
+                                        <option value="9">Super User</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                    <input class='regbtn2' type='submit' value='Submit'>
+            </form>
+        </div>
+        <div class="fbtns2">
+            <a href="/logout"><button class='footer'>Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>

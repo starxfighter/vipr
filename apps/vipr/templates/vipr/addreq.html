@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <script language="javascript" type="text/javascript">
+        function limitText(limitField, limitCount, limitNum) {
+            if (limitField.value.length > limitNum) {
+                limitField.value = limitField.value.substring(0, limitNum);
+            } else {
+                limitCount.value = limitNum - limitField.value.length;
+            }
+        }
+    </script>
+    <title>Add a Request</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2 class='dashhd'>Add a request</h2>
+        <h2 class='nameblk'>Hello {{user.first_name}} {{user.last_name}}</h2>
+        {% if messages %}
+        <ul class="message">
+            {% for message in messages %}
+            <li{% if message.tags%} class="{{message.tags}}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <div class='reqadd'>
+            <form action="/request_add/" method='post'>
+                {% csrf_token %}
+                <h4 class='info'>Please enter the request that you would like answered by the help desk</h4>
+                <textarea class='txtarea' name="reqdesc" onKeyDown="limitText(this.form.reqdesc,this.form.countdown,255);" 
+                onKeyUp="limitText(this.form.reqdesc,this.form.countdown,255);">
+                </textarea><br>
+                <font size="1">(Maximum characters: 255)<br>
+                You have <input readonly type="text" name="countdown" size="3" value="255"> characters left.</font>
+                <!-- <input type='text' name='reqdesc' id='reqdesc'> -->
+                <input class='subbtn' type='submit' value='Submit'>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,450 @@
+#wrapper{
+    background-image: url('/static/vipr/style/images/oldtimeflag.jpg');
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header{
+    display: block;
+    width: 100%;
+    height: 100px;
+    text-align: right;
+}
+.header button{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.airforce{
+    background-image: url('/static/vipr/style/images/airforceseal.png');
+    height: 100px;
+    width: 100px;
+    margin-left: 624px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;   
+}
+.army{
+    background-image: url('/static/vipr/style/images/armyseal.png');
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;   
+}
+.navy{
+    background-image: url('/static/vipr/style/images/navyseal.png');
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;   
+}
+.marines{
+    background-image: url('/static/vipr/style/images/marinesseal.png');
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;   
+}
+.natgrd{
+    background-image: url('/static/vipr/style/images/nationalguardseal.gif');
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;   
+}
+.cstgrd{
+    background-image: url('/static/vipr/style/images/CoastGuardSeal.png');
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;   
+}
+.title h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 84pt;
+    color: darkred;
+    text-align: center;
+    background-color: lightgray;
+    opacity: 0.7;
+}
+.title h4{
+    font-size: 24pt;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.launchbtn{
+    margin-top: 200px;
+    margin-left: 734px;
+}
+.ilb{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 106px;   
+}
+.tilb{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-right: 106px;
+    margin-top: 20px;   
+}
+.explain{
+    height: 110px;
+    width: 500px;
+    margin-top: 80px;
+    margin-left: 675px;
+    background-color: lightgray;
+    opacity: 0.8;
+    padding: 10px;
+}
+p{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold;
+}
+.loginhd{
+    display: block;
+    height: 76px;
+    width: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold; 
+    font-size: 24pt;
+    padding-top: 70px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+}
+.message{
+    background-color: white;
+    color: red;
+    font-weight: bolder;
+    font-size: 18pt;
+}
+.loginfrm{
+    color: white;
+    font-size: 18pt;
+    margin-left: 20px;
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+}
+.vaseal{
+    background-image: url('/static/vipr/style/images/vaseal.png');
+    height: 300px;
+    width: 350px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 350px 300px;   
+}
+.vahold{
+    background-color: lightgray;
+    opacity: 0.6;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+    margin-top: 40px;
+    padding: 10px;
+}
+.memorial{
+    background-image: url('/static/vipr/style/images/classicflag.jpg');
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;  
+    margin-left: 210px;
+    margin-top: 270px; 
+}
+.regfrm{
+    color: white;
+    font-size: 18pt;
+    margin-left: 20px;
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+}
+.frmlbl{
+    width: 150px;
+    margin-top:10px;
+}
+.frmtxt{
+    display: block;
+    width:300px;
+    font-weight: bolder;
+    color: red;
+}
+.svcchoice, th, td{
+    width:1024px;
+    margin-top: 5px;
+    text-align: center;
+}
+.regbtn{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 436px;
+    margin-top: 66px;      
+}
+.chrgtbl, tr, h6{
+    width:1024px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 18pt;
+    font-weight: bolder;
+}
+.chrgfrm{
+    margin-left: 30px;
+}
+.nameblk{
+    display: block;
+    height: 76px;
+    width: 500px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold; 
+    font-size: 24pt;
+    padding-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+}
+.btns{
+    margin-left: 73px;
+    margin-top: -92px;
+    margin-bottom: 20px;
+}
+.uptdrecs{
+    width: 1000px;
+    height: 300px;
+    background-color: lightgray;
+    opacity: 0.8;
+    overflow: scroll;
+    margin-left: 20px;
+}
+.dashhd{
+    display: block;
+    height: 36px;
+    width: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold; 
+    font-size: 24pt;
+    padding-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+}
+.footer{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 436px;
+    margin-top: 66px;    
+}
+.fbtns{
+    margin-left: 780px;
+    margin-top: -213px;
+    margin-bottom: 20px;
+}
+.data{
+    font-size: 16pt;
+    display: block;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: black;
+}
+.info{
+    font-size: 16pt;
+    color: white;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.reqadd{
+    margin-left: 30px;
+    color: white;
+}
+.txtarea{
+    width:300px;
+    height: 200px;
+}
+.subbtn{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 280px;
+    margin-top: 10px;      
+}
+.kshd{
+    width: 380px;
+    display: block;
+    height: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold; 
+    font-size: 24pt;
+    padding-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+}
+.ksbtn{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 280px;
+    margin-top: 10px;
+}
+.ksbtns{
+    margin-left: 73px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.kssrc{
+    margin-left: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+.rvhd{
+    width: 470px;
+    display: block;
+    height: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold; 
+    font-size: 24pt;
+    padding-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+}
+.rvbtns{
+    margin-left: 73px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.recordDtl h2{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16pt;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.recordDtl h3{
+    color: white;
+    font-size: 16pt;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.rvrdhd{
+    width: 700px;
+    display: block;
+    height: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold; 
+    font-size: 24pt;
+    padding-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+}
+.data2{
+    font-size: 16pt;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: black;
+}
+.fbtns2{
+    margin-left: 500px;
+    margin-top: -200px;
+    margin-bottom: 20px;
+}
+.uuhd{
+    width: 700px;
+    display: block;
+    height: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-weight: bold; 
+    font-size: 24pt;
+    padding-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+    color: white;
+}
+.uubtns{
+    margin-left: 73px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.urfrmlbl{
+    width: 240px;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.fbtns3{
+    display: inline-block;
+    width: 200px;
+    margin-left: 336px;
+    margin-top: -137px;
+    margin-bottom: 20px;
+}
+.footer2{
+    height: 40px;
+    width: 150px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: -280px;
+    margin-top: 66px;    
+}
+.urbtns{
+    margin-left: 73px;
+    margin-top: 0px;
+    margin-bottom: -85px;
+}
+.furbtns{
+    display: inline-block;
+    width: 200px;
+    margin-left: 336px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+.urbtn{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 436px;
+    margin-top: 0px;      
+}
+.urfrm{
+    color: white;
+    font-size: 18pt;
+    margin-left: 20px;
+    display: inline-block;
+    width: 500px;
+    height: 424px;
+}
+.urfiles{
+    width: 760px;
+    height: 184px;
+    background-color: lightgray;
+    opacity: 0.8;
+    overflow: scroll;
+    margin-left: 20px;
+}
+.regbtn2{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 530px;
+    margin-top: 66px;      
+}

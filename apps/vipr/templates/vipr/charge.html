@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Create Service Charge</title>
+</head>
+<body>
+    <div id="wrapper">
+    <h2>Checkout</h2>
+    {% if messages %}
+    <ul class="message">
+        {% for message in messages %}
+        <li{% if message.tags%} class="{{message.tags}}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <div>
+        {% if description == "Gold Service" %}
+            <table class='chrgtbl'>
+                <tr><h6>Gold</h6></tr>
+                <tr><h6> $29.99 </h6></tr>
+                <tr><h6>&#9960;24 Hour Response Time</h6></tr>
+                <tr><h6>&#9960;24/7 Phone Service</h6></tr>
+                <tr><h6>&#9960;Priority Issue Handeling</h6></tr>
+                <tr><h6>&#9960;Assigned Issue Coordinator</h6></tr>
+            </table>
+        {% endif %}
+        {% if description == "Silver Service" %}
+            <table class='chrgtbl'>
+                <tr><h6>Silver</h6></tr>
+                <tr><h6> $19.99 </h6></tr>
+                <tr><h6>&#9960;48 Hour Response Time</h6></tr>
+                <tr><h6>&#9960;Mon - Fri Phone Service</h6></tr>
+                <tr><h6>&#9960;Special Issue Handeling</h6></tr>
+            </table>
+        {% endif %}
+        {% if description == "Bronze Service" %}
+            <table class='chrgtbl'>
+                <tr><h6>Bronze</h6></tr>
+                <tr><h6> $9.99 </h6></tr>
+                <tr><h6>&#9960;72 Hour Response Time</h6></tr>
+                <tr><h6>&#9960;Mon - Fri Phone Service</h6></tr>
+        {% endif %}
+    </div>
+    <form class='chrgfrm' action="/checkout" method="POST">
+        {% csrf_token %}
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key={{stripe_key}}
+            data-amount={{amount}}
+            data-name="Vipr"
+            data-description="{{description}}"
+            data-currency="usd">
+        </script>
+    </form>
+    <div class='button'>
+        <a href="/register"><button class='regbtn'>Go Back</button></a>
+    </div>
+    </div>
+</body>
+</html>

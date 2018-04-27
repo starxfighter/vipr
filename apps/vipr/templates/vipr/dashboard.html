@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2 class='dashhd'>Dashboard</h2>
+        <h2 class="nameblk">Hello {{user.first_name}} {{user.last_name}}</h2>
+        <div class="btns">
+            <a href="/addrequest"><button class='regbtn'>Add a new request</button></a>
+            <a href="/keywordsrch"><button class='regbtn'>Search by keyword</button></a>
+        </div>
+        <h3 class='dashhd'>Requested</h3>
+        <div class='uptdrecs'>
+            {% for r in requests %}
+            <tr>
+                <td><h5 class='data'>Information Requested:</h5></td>
+                <td><h5 class='data'><a href = "/request/{{r.id}}">{{r.req_desc}}</a></h5></td>
+            </tr>
+        {% endfor %}
+        </div>
+        <h3 class='dashhd'>Answered</h3>
+        <div class='uptdrecs'>
+            {% for a in answered %}
+            <tr>
+                <td><h5 class='data'>Information Requested:</h5></td>
+                <td><h5 class='data'><a href = "/request/{{a.id}}">{{a.req_desc}}</a></h5></td>
+                <td><h5 class='data'>Request Reolution Detail</h5></td>
+                <td><h5 class='data'>{{a.req_res}}</h5></td>
+            </tr>
+        {% endfor %}
+        </div>
+        <div class="fbtns">
+            <a href="/logout"><button class='footer'>Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>

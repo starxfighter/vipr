@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2 class='dashhd'>Dashboard</h2>
+        <h2 class='nameblk'>Hello {{user.first_name}} {{user.last_name}}</h2>
+        <h3 class='dashhd'>Pending</h3>
+        <div class='uptdrecs'>
+            {% for w in worklist %}
+            <tr>
+                <td><h5 class='data'>Information Requested:</h5></td>
+                <td><h5 class='data'><a href = "/updatereq/{{w.id}}">{{w.req_desc}}</a></h5></td>
+            </tr>
+        {% endfor %}
+        </div>
+        {% if user.sys_access_level > 2 %}
+        <h3 class='dashhd'>User List</h3>
+        <div class='uptdrecs'>
+            {% for u in userlist %}
+            <tr>
+                <td><h5 class='data2'>User:</h5></td>
+                <td><h5 class='data2'><a href = "/updateusr/{{u.id}}">{{u.first_name}} {{u.last_name}}</a></h5></td>
+                <td><h5 class='data2'>Military id: {{u.military_id}}</h5></td>
+                <td><h5 class='data2'>Branch: {{u.service_branch}}</h5></td>
+                <td><h5 class='data'>User Access: {{u.sys_access_level}}</h5></td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+        </div>
+        <div class="fbtns">
+            <a href="/logout"><button class='footer'>Logout</button></a>
+        </div>
+    </div>
+</body>
+</html>

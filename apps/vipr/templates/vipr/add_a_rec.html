@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'vipr/style/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Add a file to the request</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2 class='uuhd'>Adding a document to:</h2>
+        <form class='regfrm' action="/adddoc/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type='hidden' name='req_id' value='{{request.id}}'>
+            <h3 class='urfrmlbl'>{{request.req_desc}}</h3>
+            <h3 class='urfrmlbl'>{{request.req_res}}</h3>
+            <h3 class='urfrmlbl'>File: <input type='file' name='document'></h3>
+            <h3 class='urfrmlbl'>or</h3>
+            <h3 class='urfrmlbl'><select name='ddocument'>
+                {% for d in documents %}
+                    <option value='{{d.id}}'>{{d.document}}</option>
+                {% endfor %}
+            </select></h3>
+            <input class='regbtn' type="submit" value="submit" />
+        </form>
+    </div>
+</body>
+</html>
