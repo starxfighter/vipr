@@ -5,8 +5,6 @@
 	VIPR is a veteran information portal, remote where veteran’s can voice their questions, concerns or requests for information and then have a single person answer the question for the veteran.
 	
 	This project is based on a RFP from the Veteran’s Affairs Department back in 2016.
-
-	
 Benefits
 
 	Veteran has a single place to go to ask questions, concerns or information requests
