@@ -1,12 +1,13 @@
 # vipr
 
-	This project was envisioned to solve an issue that the Veteran Affairs office has with not being able to answer the questions of veterans in a timely and efficient manner.
+	This project was envisioned to solve an issue that the Veteran Affairs office has with not being able to answer 
+	the questions of veterans in a timely and efficient manner.
 	
-	VIPR is a veteran information portal, remote where veteran’s can voice their questions, concerns or requests for information and then have a single person answer the question for the veteran.
+	VIPR is a veteran information portal, remote where veteran’s can voice their questions, concerns or requests for
+	 information and then have a single person answer the question for the veteran.
 	
 	This project is based on a RFP from the Veteran’s Affairs Department back in 2016.
-Benefits
-
-	Veteran has a single place to go to ask questions, concerns or information requests
-
-Requests are answered by help desk personnel that will research the request/issue and respond promptly without having the veteran go to or call multiple places to get an answer
+ Benefits
+	`Veteran has a single place to go to ask questions, concerns or information requests
+	Requests are answered by help desk personnel that will research the request/issue and respond promptly 
+	without having the veteran go to or call multiple places to get an answer
